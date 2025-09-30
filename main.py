@@ -32,13 +32,13 @@ def hangman():
         print(" ".join(progress))
 
         if "_" not in progress:
-            print(f"You guessed the right word it was {word}")
+            print(f"You guessed the right word it was {word}") #if you guess the right word it shows that word and break the loop
             break
     else:
-        print(f"The game is over The word was:{word}")
+        print(f"The game is over The word was:{word}") #If the user is failed to guess than the game is over and all attmpts are used
 
 
-hangman()
+hangman() #to run the game or functiom
 
 
 
