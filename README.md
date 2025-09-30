@@ -31,8 +31,10 @@ Or you run out of attempts ❌ (Game Over).
 
 
 📝 Example Gameplay
+
 Welcome To The Game:
 choose the correct word from the list given below
+
 ['Alert', 'train', 'river', 'house', 'chair', 'Angle', 'Aware', 'Black', 'Agent', 'Badly', 'Blame']
 _ _ _ _ _
 
