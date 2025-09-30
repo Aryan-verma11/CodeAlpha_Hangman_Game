@@ -1,29 +1,36 @@
 import random
 def hangman():
-    words = ["apple", "train", "river", "house", "chair"]
+    words = ["Alert", "train", "river", "house", "chair" ,"Angle","Aware" ,"Black",
+"Agent","Badly","Blame"]
     word=random.choice(words)
     guessed_letter=[]
     attempt=6
 
     print("Welcome To The Game:")
+    print("choose the correct word from the list given below")
+    print(words)
     print("_ " * len(word))
 
     while attempt>0:
-        guess=input("guess a letter: ").lower()
-        if len(guess) !=1 or not guess.isalpha():
+        guess=input("guess a letter: ").lower()  
+        if len(guess) !=1 or not guess.isalpha():  #Input should be only a alphabet 
             print("Enter a single letter")
             continue
+
         if guess in guessed_letter:
-            print("You Already Guessed the Letter")
+            print("You Already Guessed the Letter")  #Not to repeat the guessed letter
             continue
-        guessed_letter.append(guess)
+
+        guessed_letter.append(guess) #If the user's input letter is right print correct
         if guess in word:
             print("correct")
+
         else:
             attempt-=1
-            print(f"wrong!! Attempts Lefts:{attempt}")
-        progress = [letter if letter in guessed_letter else "_" for letter in word]
+            print(f"wrong!!, Attempts Lefts:{attempt}") #It tells the number of attempts left
+        progress = [letter if letter in guessed_letter else "_" for letter in word] #list comprehnsion it checks the every letter enter by the user and if the letter is correct it remove (_) and show the letter 
         print(" ".join(progress))
+
         if "_" not in progress:
             print(f"You guessed the right word it was {word}")
             break
