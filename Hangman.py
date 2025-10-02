@@ -2,7 +2,7 @@ import random
 def hangman():
     words = ["Alert", "train", "river", "house", "chair" ,"Angle","Aware" ,"Black",
 "Agent","Badly","Blame"]
-    word=random.choice(words)
+    word=random.choice(words).lower()
     guessed_letter=[] #guess letter should be stored in list
     attempt=6
 
